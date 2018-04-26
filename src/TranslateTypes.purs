@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -29,7 +28,7 @@ instance encodeBoundedLengthString :: Encode BoundedLengthString where encode = 
 
 -- | <p>An internal server error occurred. Retry your request.</p>
 newtype InternalServerException = InternalServerException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeInternalServerException :: Newtype InternalServerException _
 derive instance repGenericInternalServerException :: Generic InternalServerException _
@@ -39,18 +38,18 @@ instance encodeInternalServerException :: Encode InternalServerException where e
 
 -- | Constructs InternalServerException from required parameters
 newInternalServerException :: InternalServerException
-newInternalServerException  = InternalServerException { "Message": (NullOrUndefined Nothing) }
+newInternalServerException  = InternalServerException { "Message": Nothing }
 
 -- | Constructs InternalServerException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInternalServerException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> InternalServerException
-newInternalServerException'  customize = (InternalServerException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInternalServerException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> InternalServerException
+newInternalServerException'  customize = (InternalServerException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The request is invalid.</p>
 newtype InvalidRequestException = InvalidRequestException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeInvalidRequestException :: Newtype InvalidRequestException _
 derive instance repGenericInvalidRequestException :: Generic InvalidRequestException _
@@ -60,12 +59,12 @@ instance encodeInvalidRequestException :: Encode InvalidRequestException where e
 
 -- | Constructs InvalidRequestException from required parameters
 newInvalidRequestException :: InvalidRequestException
-newInvalidRequestException  = InvalidRequestException { "Message": (NullOrUndefined Nothing) }
+newInvalidRequestException  = InvalidRequestException { "Message": Nothing }
 
 -- | Constructs InvalidRequestException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidRequestException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> InvalidRequestException
-newInvalidRequestException'  customize = (InvalidRequestException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInvalidRequestException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> InvalidRequestException
+newInvalidRequestException'  customize = (InvalidRequestException <<< customize) { "Message": Nothing }
 
 
 
@@ -80,7 +79,7 @@ instance encodeLanguageCodeString :: Encode LanguageCodeString where encode = ge
 
 -- | <p>Amazon Translate is unavailable. Retry your request later.</p>
 newtype ServiceUnavailableException = ServiceUnavailableException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeServiceUnavailableException :: Newtype ServiceUnavailableException _
 derive instance repGenericServiceUnavailableException :: Generic ServiceUnavailableException _
@@ -90,18 +89,18 @@ instance encodeServiceUnavailableException :: Encode ServiceUnavailableException
 
 -- | Constructs ServiceUnavailableException from required parameters
 newServiceUnavailableException :: ServiceUnavailableException
-newServiceUnavailableException  = ServiceUnavailableException { "Message": (NullOrUndefined Nothing) }
+newServiceUnavailableException  = ServiceUnavailableException { "Message": Nothing }
 
 -- | Constructs ServiceUnavailableException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newServiceUnavailableException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> ServiceUnavailableException
-newServiceUnavailableException'  customize = (ServiceUnavailableException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newServiceUnavailableException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> ServiceUnavailableException
+newServiceUnavailableException'  customize = (ServiceUnavailableException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The size of the input text exceeds the length constraint for the <code>Text</code> field. Try again with a shorter text. </p>
 newtype TextSizeLimitExceededException = TextSizeLimitExceededException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeTextSizeLimitExceededException :: Newtype TextSizeLimitExceededException _
 derive instance repGenericTextSizeLimitExceededException :: Generic TextSizeLimitExceededException _
@@ -111,18 +110,18 @@ instance encodeTextSizeLimitExceededException :: Encode TextSizeLimitExceededExc
 
 -- | Constructs TextSizeLimitExceededException from required parameters
 newTextSizeLimitExceededException :: TextSizeLimitExceededException
-newTextSizeLimitExceededException  = TextSizeLimitExceededException { "Message": (NullOrUndefined Nothing) }
+newTextSizeLimitExceededException  = TextSizeLimitExceededException { "Message": Nothing }
 
 -- | Constructs TextSizeLimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTextSizeLimitExceededException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> TextSizeLimitExceededException
-newTextSizeLimitExceededException'  customize = (TextSizeLimitExceededException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newTextSizeLimitExceededException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> TextSizeLimitExceededException
+newTextSizeLimitExceededException'  customize = (TextSizeLimitExceededException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>The number of requests exceeds the limit. Resubmit your request later.</p>
 newtype TooManyRequestsException = TooManyRequestsException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeTooManyRequestsException :: Newtype TooManyRequestsException _
 derive instance repGenericTooManyRequestsException :: Generic TooManyRequestsException _
@@ -132,12 +131,12 @@ instance encodeTooManyRequestsException :: Encode TooManyRequestsException where
 
 -- | Constructs TooManyRequestsException from required parameters
 newTooManyRequestsException :: TooManyRequestsException
-newTooManyRequestsException  = TooManyRequestsException { "Message": (NullOrUndefined Nothing) }
+newTooManyRequestsException  = TooManyRequestsException { "Message": Nothing }
 
 -- | Constructs TooManyRequestsException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTooManyRequestsException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> TooManyRequestsException
-newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newTooManyRequestsException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> TooManyRequestsException
+newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": Nothing }
 
 
 
@@ -187,7 +186,7 @@ newTranslateTextResponse' _SourceLanguageCode _TargetLanguageCode _TranslatedTex
 
 -- | <p>Amazon Translate cannot translate input text in the source language into this target language. For more information, see <a>how-to-error-msg</a>. </p>
 newtype UnsupportedLanguagePairException = UnsupportedLanguagePairException 
-  { "Message" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
   }
 derive instance newtypeUnsupportedLanguagePairException :: Newtype UnsupportedLanguagePairException _
 derive instance repGenericUnsupportedLanguagePairException :: Generic UnsupportedLanguagePairException _
@@ -197,10 +196,10 @@ instance encodeUnsupportedLanguagePairException :: Encode UnsupportedLanguagePai
 
 -- | Constructs UnsupportedLanguagePairException from required parameters
 newUnsupportedLanguagePairException :: UnsupportedLanguagePairException
-newUnsupportedLanguagePairException  = UnsupportedLanguagePairException { "Message": (NullOrUndefined Nothing) }
+newUnsupportedLanguagePairException  = UnsupportedLanguagePairException { "Message": Nothing }
 
 -- | Constructs UnsupportedLanguagePairException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnsupportedLanguagePairException' :: ( { "Message" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) } ) -> UnsupportedLanguagePairException
-newUnsupportedLanguagePairException'  customize = (UnsupportedLanguagePairException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newUnsupportedLanguagePairException' :: ( { "Message" :: Maybe (String) } -> {"Message" :: Maybe (String) } ) -> UnsupportedLanguagePairException
+newUnsupportedLanguagePairException'  customize = (UnsupportedLanguagePairException <<< customize) { "Message": Nothing }
 

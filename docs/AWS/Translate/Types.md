@@ -26,7 +26,7 @@ Encode BoundedLengthString
 
 ``` purescript
 newtype InternalServerException
-  = InternalServerException { "Message" :: NullOrUndefined (String) }
+  = InternalServerException { "Message" :: Maybe (String) }
 ```
 
 <p>An internal server error occurred. Retry your request.</p>
@@ -51,7 +51,7 @@ Constructs InternalServerException from required parameters
 #### `newInternalServerException'`
 
 ``` purescript
-newInternalServerException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> InternalServerException
+newInternalServerException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> InternalServerException
 ```
 
 Constructs InternalServerException's fields from required parameters
@@ -60,7 +60,7 @@ Constructs InternalServerException's fields from required parameters
 
 ``` purescript
 newtype InvalidRequestException
-  = InvalidRequestException { "Message" :: NullOrUndefined (String) }
+  = InvalidRequestException { "Message" :: Maybe (String) }
 ```
 
 <p>The request is invalid.</p>
@@ -85,7 +85,7 @@ Constructs InvalidRequestException from required parameters
 #### `newInvalidRequestException'`
 
 ``` purescript
-newInvalidRequestException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> InvalidRequestException
+newInvalidRequestException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> InvalidRequestException
 ```
 
 Constructs InvalidRequestException's fields from required parameters
@@ -110,7 +110,7 @@ Encode LanguageCodeString
 
 ``` purescript
 newtype ServiceUnavailableException
-  = ServiceUnavailableException { "Message" :: NullOrUndefined (String) }
+  = ServiceUnavailableException { "Message" :: Maybe (String) }
 ```
 
 <p>Amazon Translate is unavailable. Retry your request later.</p>
@@ -135,7 +135,7 @@ Constructs ServiceUnavailableException from required parameters
 #### `newServiceUnavailableException'`
 
 ``` purescript
-newServiceUnavailableException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> ServiceUnavailableException
+newServiceUnavailableException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> ServiceUnavailableException
 ```
 
 Constructs ServiceUnavailableException's fields from required parameters
@@ -144,7 +144,7 @@ Constructs ServiceUnavailableException's fields from required parameters
 
 ``` purescript
 newtype TextSizeLimitExceededException
-  = TextSizeLimitExceededException { "Message" :: NullOrUndefined (String) }
+  = TextSizeLimitExceededException { "Message" :: Maybe (String) }
 ```
 
 <p>The size of the input text exceeds the length constraint for the <code>Text</code> field. Try again with a shorter text. </p>
@@ -169,7 +169,7 @@ Constructs TextSizeLimitExceededException from required parameters
 #### `newTextSizeLimitExceededException'`
 
 ``` purescript
-newTextSizeLimitExceededException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> TextSizeLimitExceededException
+newTextSizeLimitExceededException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> TextSizeLimitExceededException
 ```
 
 Constructs TextSizeLimitExceededException's fields from required parameters
@@ -178,7 +178,7 @@ Constructs TextSizeLimitExceededException's fields from required parameters
 
 ``` purescript
 newtype TooManyRequestsException
-  = TooManyRequestsException { "Message" :: NullOrUndefined (String) }
+  = TooManyRequestsException { "Message" :: Maybe (String) }
 ```
 
 <p>The number of requests exceeds the limit. Resubmit your request later.</p>
@@ -203,7 +203,7 @@ Constructs TooManyRequestsException from required parameters
 #### `newTooManyRequestsException'`
 
 ``` purescript
-newTooManyRequestsException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> TooManyRequestsException
+newTooManyRequestsException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> TooManyRequestsException
 ```
 
 Constructs TooManyRequestsException's fields from required parameters
@@ -276,7 +276,7 @@ Constructs TranslateTextResponse's fields from required parameters
 
 ``` purescript
 newtype UnsupportedLanguagePairException
-  = UnsupportedLanguagePairException { "Message" :: NullOrUndefined (String) }
+  = UnsupportedLanguagePairException { "Message" :: Maybe (String) }
 ```
 
 <p>Amazon Translate cannot translate input text in the source language into this target language. For more information, see <a>how-to-error-msg</a>. </p>
@@ -301,7 +301,7 @@ Constructs UnsupportedLanguagePairException from required parameters
 #### `newUnsupportedLanguagePairException'`
 
 ``` purescript
-newUnsupportedLanguagePairException' :: ({ "Message" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String) }) -> UnsupportedLanguagePairException
+newUnsupportedLanguagePairException' :: ({ "Message" :: Maybe (String) } -> { "Message" :: Maybe (String) }) -> UnsupportedLanguagePairException
 ```
 
 Constructs UnsupportedLanguagePairException's fields from required parameters
